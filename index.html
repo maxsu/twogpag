@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Twogpag by maxsu</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Twogpag</h1>
+        <h2></h2>
+
+        <section id="downloads">
+          <a href="https://github.com/maxsu/twogpag/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/maxsu/twogpag/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/maxsu/twogpag" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="the-word-of-god-pixel-art-style-guide" class="anchor" href="#the-word-of-god-pixel-art-style-guide"><span class="octicon octicon-link"></span></a>The WORD OF GOD Pixel Art Style Guide</h1>
+
+<h2>
+<a name="preamble--rationale" class="anchor" href="#preamble--rationale"><span class="octicon octicon-link"></span></a>Preamble / Rationale</h2>
+
+<p>BROAAAAAAAAAAAAAAAAAAAAAAAAAWR!!</p>
+
+<p>SATAAAAAAAAAAAAAAAAAAAAAN!</p>
+
+<p>WHOOOOOOOOOOOOM!</p>
+
+<p><img src="https://dl.dropboxusercontent.com/s/dnq6ai2ho1j2ygu/OTT.gif" alt="GOD"></p>
+
+<p>"YES MY SON. WHAT KNOWLEDGE DO YOU SEEK?"</p>
+
+<p>"AH. PIXEL ART."</p>
+
+<h2>
+<a name="grid-size" class="anchor" href="#grid-size"><span class="octicon octicon-link"></span></a>Grid size</h2>
+
+<p>The general tile grid is 32x32 with (possible) sub tiles at 16x16.
+The rationale being that the basic size of a square object (eg a chair
+or a character) is a 32x32 area.  All base assets are designed to work
+at 32x32 tiling, and it's recommended that you build yours to be so as
+well.  However, for versatility tiling can happen at 16x16 resolution.</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/32x32grid.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/32x32grid.png</a>
+   :alt: 32x32 grid example</p>
+
+<h2>
+<a name="perspective" class="anchor" href="#perspective"><span class="octicon octicon-link"></span></a>Perspective</h2>
+
+<p>The camera angle is top-down, roughly 60 degrees.</p>
+
+<p>Rendering should be orthographic, which means there is <em>no</em>
+perspective... things <strong>do not</strong> get smaller as they move into the
+distance.  If you're using perspective techniques on your props or
+tiles, that's wrong.</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/chest_perspective.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/chest_perspective.png</a>
+   :alt: Chest perspective example</p>
+
+<p>The following image is a 3d rendering
+(<code>source &lt;_static/images/perspective.blend&gt;</code>_)
+demonstrating orthographic projection.  For examples of actual
+proportions, see existing body of pixel art.</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/60perspective.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/60perspective.png</a>
+   :alt: 60 degree camera perspective example</p>
+
+<h2>
+<a name="lighting-colors-and-shading" class="anchor" href="#lighting-colors-and-shading"><span class="octicon octicon-link"></span></a>Lighting, colors, and shading</h2>
+
+<p>Roughly a "toon style rendering" with medium-low levels of texturing.
+We want some detail, but not so much that things are so ornate that it
+might make collaboration difficult.  We don't want things to be
+"noisy" either.  But detail is good.  Texturing should have a
+toon-style; this is accomplished with medium to low amounts of
+texturing.  Details should be used sparsely, so make them count!</p>
+
+<p>Shade in blocks.  Begin drawing by blocking out the object first,
+paying attention to its volume.  Lines should be added afterward, and
+generally only around the edges and with very important details.
+Details should mostly be implied by form and color, not by outlines.</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/process-scaled.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/process-scaled.png</a>
+   :alt: Process of blocking in a sprite</p>
+
+<p>Lighting should primarily come from above.  If there is any side
+directionality, it should come from the left, but not by much: keep it
+mostly center.</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/sunpoint.gif">http://lpc.opengameart.org/static/lpc-style-guide/_images/sunpoint.gif</a>
+   :alt: Lighting example</p>
+
+<p>An <code>example scene in blender &lt;_static/images/perspective.blend&gt;</code>_ with
+a sun light pointing in the appropriate location:</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/lighting_direction.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/lighting_direction.png</a>
+   :alt: Lighting blender screenshot example</p>
+
+<p><em>Left example shows from the "top-facing" camera used in this style;
+right example shows a sideview.  Yellow "sun" with ray is the light
+source, big orange triangle on right is the camera.</em></p>
+
+<p>Your light to dark color ramps should <em>never</em> all have the same hue.
+Vary the hue and saturation a bit as you go from light to dark, or
+your objects will look flat.</p>
+
+<p>To create shadows or lowlights, once you have the main color the shade
+you want it to be move the hue (hsv selector) slightly towards the
+closest purple. To create highlight color, do the same but instead of
+purple and shade move the hue slightly towards the closest yellow and
+lighten it up. Adjust as necessary until it looks "right".</p>
+
+<p>Inside, things will be cooler in overall color, with slightly less
+contrast.  This is doubly true for things like basements, caves and
+other underground areas.</p>
+
+<p>All drop shadows should be done with the color #322125 at 60 percent
+opacity.  If it makes sense, one may also provide a combined version
+of two tiles, so only one layer is needed to, say, put a house on a
+grass background.</p>
+
+<p>Dithering should be used sparingly if at all.  None of the base
+artwork has dithering.</p>
+
+<p>There's no specific palette <em>required</em> for Liberated Pixel Cup asset
+conformance, but it's generally best to try to match to the colors
+used in the base set.  So that said, here's a palette that may be
+useful in producing matching assets.</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/colors.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/colors.png</a>
+   :alt: Suggested palette</p>
+
+<h2>
+<a name="outlines" class="anchor" href="#outlines"><span class="octicon octicon-link"></span></a>Outlines</h2>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/rock_outlinedemo.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/rock_outlinedemo.png</a>
+   :alt: Rock outline demo</p>
+
+<p>Outlines should be a darker version of the current color, or a dark
+color generally, not black.  (Extreme circumstances obviously may have
+exceptions.)</p>
+
+<h2>
+<a name="tile-authoring" class="anchor" href="#tile-authoring"><span class="octicon octicon-link"></span></a>Tile authoring</h2>
+
+<p>Details are simplistic.  There are more details on the edges, and the
+center tile should be either one color or a very subtle pattern.</p>
+
+<p>Occasional detail tiles should be thrown in to break the monotony of
+having a single repeating tile.</p>
+
+<p>Edged tiles such as walls and floors should be arranged in a similar
+manner as the establishing art.</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/tiles_example_scene.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/tiles_example_scene.png</a>
+   :alt: An example scene using tiles from the base set</p>
+
+<p><em>Demonstrating creating tiles that can be used to make more complex
+patterns.</em></p>
+
+<h2>
+<a name="characters" class="anchor" href="#characters"><span class="octicon octicon-link"></span></a>Characters</h2>
+
+<p>Characters should have their own color palettes so that they stand out
+from the background.  Drop shadows should follow the same rule as the
+tiles, #322125 at 60% opacity.</p>
+
+<p>Characters are squashed, roundish, and not realistically proportioned.
+Bases are approximately two and a half heads tall and in the same
+perspective as the tiles.  The base should fit in a 32x48 space and
+the clothing should fit in 48x64 space.  The outlines should be black
+or near black, no selective outlining.</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/characters_nude.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/characters_nude.png</a>
+   :alt: Example of unaccessorized characters</p>
+
+<p>We have provided a :ref:<code>character base &lt;assets-character-base&gt;</code> that
+you can accessorize.  (Of course, deviating from this base is
+perfectly fine if it makes sense; just try to keep your work within
+the style as described in this document and squashed stylization we
+keep generally for characters.)</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/characters_accessorized.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/characters_accessorized.png</a>
+   :alt: Example of unaccessorized characters</p>
+
+<p>If you are making an animation sheet that has multiple perspectives,
+you should generally vertically sort that sheet into rows in this
+order: back, left, front, right.  Having the sprites arranged this
+way simplfies the code side of things a little bit.</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/female_spellcast.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/female_spellcast.png</a>
+   :alt: Spellcasting female to demonstrate direction</p>
+
+<p>These concepts can generally be expanded to monsters and other
+creatures, of course accounting for different proportions of said
+characters.</p>
+
+<h2>
+<a name="props-and-other-objects" class="anchor" href="#props-and-other-objects"><span class="octicon octicon-link"></span></a>Props and other objects</h2>
+
+<p>Props should be colored so that they don't blend in with the
+surrounding background tiles (vary color, brightness, and saturation
+to provide contrast).</p>
+
+<p>There's should be a large difference in lighting between the sides and
+the top of objects.  Look at these objects as example:</p>
+
+<p>.. image:: <a href="http://lpc.opengameart.org/static/lpc-style-guide/_images/barrel_and_bucket.png">http://lpc.opengameart.org/static/lpc-style-guide/_images/barrel_and_bucket.png</a>
+   :alt: Examples of object lighting via a barrel and a bucket</p>
+
+<p>Props should have shadows, or they will appear not to be part of the
+scene.  Shadows should follow the same transparency blending rules as
+mentioned in the "lighting and shadows" section above.</p>
+
+<h2>
+<a name="things-that-are-important-enough-to-be-worth-repeating" class="anchor" href="#things-that-are-important-enough-to-be-worth-repeating"><span class="octicon octicon-link"></span></a>Things that are important enough to be worth repeating</h2>
+
+<ul>
+<li>No pure colors!</li>
+<li>Vary the hues of your color ramps!</li>
+<li>Highlighted areas are yellow-ish, shadowed areas are purple-ish.</li>
+<li>Block your art out first, including shadows, before adding detail.</li>
+</ul><h2>
+<a name="useful-generalist-resources" class="anchor" href="#useful-generalist-resources"><span class="octicon octicon-link"></span></a>Useful, generalist resources</h2>
+
+<p>These articles do not directly apply to the style we are building
+here, but may help people get involved:</p>
+
+<p>Pixel Tutorials:</p>
+
+<ul>
+<li>
+<a href="http://tkool.jp/fancontents/lecture/graphic/">http://tkool.jp/fancontents/lecture/graphic/</a> -- It's in Japanese,
+but the tutorials are thorough and the art is all you really need to
+figure out what they're teaching.</li>
+<li>
+<a href="http://gas13.ru/v3/tutorials/">http://gas13.ru/v3/tutorials/</a> -- Excellent for teaching the why of
+pixel art, not just the how.  "So you want to be a Pixel Artist" is
+highly recommended.</li>
+<li>
+<a href="http://www.pixeljoint.com/forum/forum_posts.asp?TID=11299">http://www.pixeljoint.com/forum/forum_posts.asp?TID=11299</a> -- A good
+general course on what pixel art is and how to start making it.</li>
+<li>
+<a href="http://opengameart.org/content/les-forges-pixel-art-course">http://opengameart.org/content/les-forges-pixel-art-course</a> -- A pixel
+art course that's so good that we translated and mirrored it.
+Originals in French here: <a href="http://www.lesforges.org/tag/pixel%20art">http://www.lesforges.org/tag/pixel%20art</a>
+</li>
+<li>
+<a href="http://www.natomic.com/hosted/marks/mpat/">http://www.natomic.com/hosted/marks/mpat/</a> -- Decent set of resources,
+though most important is maybe the <code>shading piece
+&lt;http://www.natomic.com/hosted/marks/mpat/shading.html&gt;</code>_ which
+describes how to avoid the dreaded "pillow shading" style and think
+about lighting placement.</li>
+</ul><p>Tiling:</p>
+
+<ul>
+<li>
+<a href="http://www.squidi.net/mapmaker/musings/m091016.php">http://www.squidi.net/mapmaker/musings/m091016.php</a> -- Describes
+patterns for reusable tiling</li>
+<li>
+<a href="http://www.codeproject.com/Articles/106884/Implementing-Auto-tiling-Functionality-in-a-Tile-M">http://www.codeproject.com/Articles/106884/Implementing-Auto-tiling-Functionality-in-a-Tile-M</a>
+-- another tiling pattern, simpler than the "blob" pattern above</li>
+</ul>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
